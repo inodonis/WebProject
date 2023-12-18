@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTreasures - Sustainable Living</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      text-align: center;
+      padding: 0.5em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 1em;
+      margin: 0 1em;
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EcoTreasures</h1>
+    <p>Discover a World of Sustainable Living</p>
+  </header>
+
+  <nav>
+    <a href="HomePage.html">Home</a>
+    <a href="VirtualShop.html">Shop</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="ContactAddress.html">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Welcome to EcoTreasures</h2>
+    <p>Explore our curated selection of eco-friendly products and join us in making a positive impact on the environment.</p>
+
+    <h3>Featured Products</h3>
+    <div id="featuredProducts"></div>
+  </main>
+
+  <footer>
+    &copy; 2023 EcoTreasures. All rights reserved.
+  </footer>
+
+  <script>
+    // Simulated data for featured products
+    const featuredProductsData = [
+      { name: 'Organic Cotton T-Shirt', price: 'Birr 529.99' },
+      { name: 'Reusable Bamboo Utensil Set', price: 'Birr 514.99' },
+      { name: 'Solar-Powered LED Lantern', price: 'Birr 939.99' }
+    ];
+
+    // Function to display featured products
+    function displayFeaturedProducts() {
+      const featuredProductsContainer = document.getElementById('featuredProducts');
+
+      featuredProductsData.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+        productCard.innerHTML = `<h4>${product.name}</h4><p>${product.price}</p>`;
+        featuredProductsContainer.appendChild(productCard);
+      });
+    }
+
+    // Display featured products on page load
+    window.onload = displayFeaturedProducts;
+  </script>
+</body>
+</html>
